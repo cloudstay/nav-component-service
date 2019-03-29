@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - create-server-index.js
+    working_directory: ~/server
+    docker:
+      - image: circleci/node:7
+    steps:
+      - checkout
+      - run: npm install
+      # - run: npm start
+
