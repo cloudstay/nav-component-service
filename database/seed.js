@@ -1,4 +1,4 @@
-const db = require('./index.js');
+// const db = require('./index.js');
 const Listings = require('./schema.js');
 const faker = require('faker');
 
@@ -19,10 +19,9 @@ const Type_Of_Beds = [
 
 let bedCount = faker.random.number({min: 1, max: 6})
 
-let dp = Math.ceil(Math.random() * 35);
-
 var createListing = () => {
   for( var data = 100; data < 200; data++) {
+    let dp = Math.ceil(Math.random() * 35);
     var dataId = data;
     Listings.create({
       listing_id: dataId,

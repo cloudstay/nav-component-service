@@ -6,7 +6,7 @@ jobs:
         - create-server-index.js
     working_directory: ~/server
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:8.15
     steps:
       - checkout
       - run: npm install
