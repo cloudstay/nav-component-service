@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 const listingSchema = new Schema({
   listing_id: String,
   listing_name: String,
-  user_picture_url: String,
-  user_name: String,
+  host_picture_url: String,
+  host_name: String,
   city: String,
   max_guests: Number,
   type_of_listings: String,
@@ -28,12 +28,12 @@ const listingSchema = new Schema({
     smoke_detector: Boolean
   }],
   sleeping_arrangements: [{
-    sofa: Number,
-    sofa_bed: Number,
-    twin_bed: Number,
-    queen_bed: Number,
-    king_bed: Number
+    type_of_bed: String,
+    no_of_beds: Number
   }]
 })
 
-let Listing = mongoose.model('List', listingSchema);
+let Listings = mongoose.model('List', listingSchema); // list is all your documents
+// Listings is model of my documents
+
+module.exports = Listings;
