@@ -11,5 +11,5 @@ jobs:
       - checkout
       - run: npm install
       # run tests!
-      - run: test
+      - run: npm test
 
