@@ -3,7 +3,7 @@ jobs:
   build:
     branches:
       only:
-        - create-server-index.js
+        - create-db
     working_directory: ~/server
     docker:
       - image: circleci/node:8.15
@@ -11,5 +11,5 @@ jobs:
       - checkout
       - run: npm install
       # run tests!
-      # - run: test
+      - run: test
 
