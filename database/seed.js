@@ -1,4 +1,4 @@
-// const db = require('./index.js');
+const db = require('./index.js');
 const Listings = require('./schema.js');
 const faker = require('faker');
 
