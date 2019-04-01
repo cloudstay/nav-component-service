@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "listing-component",
   "version": "",
   "description": "",
   "author": "",
@@ -8,7 +8,10 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon ./server/index.js"
+    "start": "nodemon server/index.js",
+    "react": "webpack -d --watch",
+    "seed": "node database/seed.js",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -16,22 +19,25 @@
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "nodemon": "^1.18.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^6.0.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "request": "^2.88.0",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-config-airbnb-standard": "^3.0.1",
     "faker": "^4.1.0",
     "jest": "^24.5.0",
     "mongodb": "^3.2.2",
