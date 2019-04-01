@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "listing-component",
   "version": "",
   "description": "",
   "author": "",
@@ -19,13 +19,16 @@
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "nodemon": "^1.18.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^6.0.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "request": "^2.88.0",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

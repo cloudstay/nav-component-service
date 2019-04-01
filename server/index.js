@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 // const morgan = require('morgan');
 const port = process.env.PORT || 3003;
 const db = require('../database/index.js')
@@ -8,6 +9,7 @@ let Listings = require('../database/schema.js')
 
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend: true}));
 app.use(express.static(path.join(__dirname, '../public')));
