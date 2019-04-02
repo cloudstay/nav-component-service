@@ -1,9 +1,12 @@
 import React from 'react';
 
-var Summary = function() {
+const Summary = function() {
   return (
     <div id="summary">
-      
+      <div>
+        <h1>Civic Center Studio With Parking</h1>
+        <p>San Francisco</p>
+      </div>
     </div>
   )
 }
