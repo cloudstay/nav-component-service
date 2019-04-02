@@ -1,5 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import Title from './Title.jsx/index.js';
+import Highlights from './Highlights.jsx';
+import Description from './Description.jsx';
+import Amenities from './Amenities.jsx';
+import SleepingArrangements from './SleepingArrangements.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -8,7 +13,6 @@ class App extends React.Component {
 
   // getRequest() {
   //   axios.get('localhost:3003/api/rooms')
-    
   //   .then((response) => {
   //     console.log('send a get request to the server')
   //   })
@@ -22,6 +26,11 @@ class App extends React.Component {
     return (
       <div>
         <h1>Hello World</h1>
+        <Title />
+        <Highlights />
+        <Description />
+        <Amenities />
+        <SleepingArrangements />
       </div>
     )
   }
