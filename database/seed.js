@@ -17,11 +17,11 @@ const Type_Of_Beds = [
   'king_bed'
 ]
 
-var createListing = () => {
-  for( var data = 100; data < 200; data++) {
+let createListing = () => {
+  for( let data = 100; data < 200; data++) {
     let dp = Math.ceil(Math.random() * 35);
     let bedCount = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-    var dataId = data;
+    let dataId = data;
     Listings.create({
       listing_id: dataId,
       listing_name: faker.lorem.sentences(1),
@@ -29,7 +29,7 @@ var createListing = () => {
       host_name: faker.name.findName(),
       city: faker.address.city(),
       max_guests: faker.random.number({min: 1, max: 6}),
-      type_of_listings: Type_Of_Listings[Math.ceil(Math.random() * Type_Of_Listings.length)],
+      type_of_listings: Type_Of_Listings[Math.floor(Math.random() * Type_Of_Listings.length)],
       bedrooms: faker.random.number({min: 1, max: 6}),
       beds: bedCount,
       baths: faker.random.number({min: 1, max: 5}),
@@ -49,7 +49,7 @@ var createListing = () => {
         smoke_detector: faker.random.boolean()
       }],
       sleeping_arrangements: [{
-        type_of_bed: Type_Of_Beds[Math.ceil(Math.random() * Type_Of_Beds.length)],
+        type_of_bed: Type_Of_Beds[Math.floor(Math.random() * Type_Of_Beds.length)],
         no_of_beds: bedCount
       }]
     })
