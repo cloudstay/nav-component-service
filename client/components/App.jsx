@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Title from './Title.jsx/index.js';
+import Summary from './Summary.jsx/index.js';
 import Highlights from './Highlights.jsx';
 import Description from './Description.jsx';
 import Amenities from './Amenities.jsx';
@@ -26,7 +26,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Hello World</h1>
-        <Title />
+        <Summary />
         <Highlights />
         <Description />
         <Amenities />
