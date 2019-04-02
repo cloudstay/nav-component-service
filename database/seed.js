@@ -17,11 +17,10 @@ const Type_Of_Beds = [
   'king_bed'
 ]
 
-let bedCount = faker.random.number({min: 1, max: 6})
-
 var createListing = () => {
   for( var data = 100; data < 200; data++) {
     let dp = Math.ceil(Math.random() * 35);
+    let bedCount = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     var dataId = data;
     Listings.create({
       listing_id: dataId,
@@ -59,4 +58,3 @@ var createListing = () => {
 }
 
 createListing();
-
