@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Summary = function() {
+const Title = function() {
   return (
     <div id="summary">
       <div>
@@ -11,4 +11,4 @@ const Summary = function() {
   )
 }
 
-export default Summary;
+export default Title;

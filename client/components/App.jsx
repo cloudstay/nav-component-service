@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Summary from './Summary.jsx';
+import Title from './Title.jsx';
 import Highlights from './Highlights.jsx';
 import Description from './Description.jsx';
 import Amenities from './Amenities.jsx';
@@ -25,8 +25,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div id="listing_container">
-          <Summary />
+        <div>
+          <Title />
           <Highlights />
           <Description />
           <Amenities />
