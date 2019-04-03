@@ -23,7 +23,7 @@ app.get('/api/rooms/:id', function(req, res) {
       console.log('err', err)
     }
     console.log('All the details of listing', listingData)
-    res.send(listingData)
+    res.json(listingData);
   });
 })
 
