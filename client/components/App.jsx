@@ -5,33 +5,43 @@ import Highlights from './Highlights.jsx';
 import Description from './Description.jsx';
 import Amenities from './Amenities.jsx';
 import SleepingArrangements from './SleepingArrangements.jsx';
-
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       listings: []
     }
+    this.getListing = this.getListing.bind(this);
   }
 
 
-  getRequest() {
+  componentWillMount() {
+    this.getListing();
+  }
+
+
+  getListing() {
     var randomListing = Math.floor(Math.random() * 100) + 100;
-    axios.get(`localhost:3003/api/rooms/${randomListing}`)
+    // console.log('random Listing:', randomListing);
+    axios.get(`/api/rooms/${randomListing}`)
     .then((response) => {
-      console.log('send a get request to the server')
+      console.log('send a get request to the server', response.data);
+      this.setState({
+        listings: response.data
+      })
     })
     .catch((error) => {
-      console.log(error)
+      console.log('Error in retrieving listings: ', error)
     })
   }
 
 
   render() {
+    // console.log('listings:', this.state.listings);
     return (
-      <div>
-        <div>
-          <Title />
+      <div style={{marginTop: 24, marginBottom: 24}}>
+        <div id="listing_summary">
+          <Title listing ={this.state.listings[0]}/>
           <Highlights />
           <Description />
           <Amenities />
