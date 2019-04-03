@@ -28,22 +28,22 @@ const seed = require('../database/seed.js');
 
 describe('seed test', function() {
   test('if listing id is a string', (done) => {
-    expect(typeof 'seed.listing_id').toBe('string');
+    expect(typeof seed.listing_id).toBe('string');
     done();
   });
 
   test('if type of listings is a string', (done) => {
-    expect(typeof 'seed.type_of_listings').toBe('string');
+    expect(typeof seed.type_of_listings).toBe('string');
     done();
   });
 
   test('if essentials is a boolean', (done) => {
-    expect(typeof 'seed.amenities.essentials').toBe('string');
+    expect(typeof seed.amenities.essentials).toBe('string');
     done();
   });
 
   test('if type of bed is a string', (done) => {
-    expect(typeof 'seed.sleeping_arrangements.type_of_bed').toBe('string');
+    expect(typeof seed.sleeping_arrangements.type_of_bed).toBe('string');
     done();
   });
 });

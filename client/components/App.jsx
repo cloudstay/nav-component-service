@@ -1,27 +1,55 @@
 import React from 'react';
 import axios from 'axios';
-
+import Title from './Title.jsx';
+import Highlights from './Highlights.jsx';
+import Description from './Description.jsx';
+import Amenities from './Amenities.jsx';
+import SleepingArrangements from './SleepingArrangements.jsx';
 class App extends React.Component {
   constructor() {
     super();
+    this.state = {
+      listings: []
+    }
+    this.getListing = this.getListing.bind(this);
   }
 
-  // getRequest() {
-  //   axios.get('localhost:3003/api/rooms')
-    
-  //   .then((response) => {
-  //     console.log('send a get request to the server')
-  //   })
-  //   .catch((error) => {
-  //     console.log(error)
-  //   })
-  // }
+
+  componentWillMount() {
+    this.getListing();
+  }
+
+
+  getListing() {
+    var listing_Id=window.location.search.slice(4,7);
+    // var randomListing = Math.floor(Math.random() * 100) + 100;
+    // console.log('random Listing:', randomListing);
+    axios.get(`/rooms/api/${listing_Id}`)
+    .then((response) => {
+      console.log('send a get request to the server', response.data);
+      this.setState({
+        listings: response.data
+      })
+    })
+    .catch((error) => {
+      console.log('Error in retrieving listings: ', error)
+    })
+  }
 
 
   render() {
+    // console.log('listings:', this.state.listings);
     return (
-      <div>
-        <h1>Hello World</h1>
+      <div id="main">
+        <div className="main-container">
+          <div>
+            <Title listing ={this.state.listings[0]}/>
+            <Highlights listing ={this.state.listings[0]}/>
+            <Description />
+            <Amenities />
+            <SleepingArrangements />
+          </div>
+        </div>
       </div>
     )
   }
