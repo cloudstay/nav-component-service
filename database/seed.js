@@ -22,9 +22,10 @@ let createListing = () => {
     let dp = Math.floor(Math.random() * (36 - 1 + 1)) + 1;
     let bedCount = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     let dataId = data;
+    let listingName = faker.lorem.sentences(1);
     Listings.create({
       listing_id: dataId,
-      listing_name: faker.lorem.sentences(1),
+      listing_name: listingName.slice(0, (listingName.length-1)),
       host_picture_url: `https://s3-us-west-1.amazonaws.com/hostprofilepicture/${dp}.jpg`,
       host_name: faker.name.findName(),
       city: faker.address.city(),
