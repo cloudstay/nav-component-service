@@ -19,7 +19,7 @@ const Type_Of_Beds = [
 
 let createListing = () => {
   for( let data = 100; data < 200; data++) {
-    let dp = Math.ceil(Math.random() * 35);
+    let dp = Math.floor(Math.random() * (36 - 1 + 1)) + 1;
     let bedCount = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     let dataId = data;
     Listings.create({
