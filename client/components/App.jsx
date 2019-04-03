@@ -39,13 +39,15 @@ class App extends React.Component {
   render() {
     // console.log('listings:', this.state.listings);
     return (
-      <div style={{marginTop: 24, marginBottom: 24}}>
-        <div id="listing_summary">
-          <Title listing ={this.state.listings[0]}/>
-          <Highlights />
-          <Description />
-          <Amenities />
-          <SleepingArrangements />
+      <div id="main">
+        <div className="main-container">
+          <div>
+            <Title listing ={this.state.listings[0]}/>
+            <Highlights />
+            <Description />
+            <Amenities />
+            <SleepingArrangements />
+          </div>
         </div>
       </div>
     )
