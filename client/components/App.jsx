@@ -6,8 +6,8 @@ import Description from './Description.jsx';
 import Amenities from './Amenities.jsx';
 import SleepingArrangements from './SleepingArrangements.jsx';
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       listings: []
     }
