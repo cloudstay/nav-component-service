@@ -2,7 +2,7 @@ import React from 'react';
 
 const Highlights = function(props) {
   let listing = props.listing;
-   console.log('props', listing.type_of_listings);
+  //  console.log('props', listing.type_of_listings);
   return (
     <div>
       <div>
