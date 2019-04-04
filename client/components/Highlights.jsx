@@ -4,7 +4,39 @@ const Highlights = function(props) {
   let listing = props.listing;
   //  console.log('props', listing.city);
   return (
-    <div>
+    <div className="listing">
+       <div className="listing-highlights-section">
+        <div className="listing-highlight">
+          <div className="listing-highlight_title" >
+            <span className="icon" aria-hidden="true">󱀁</span>
+            <div className="listing-highlight_title_name">{listing.type_of_listings}</div>
+          </div>
+          <div className="listing-highlight_details" >
+            <span className="listing-highlight_text">{listing.max_guests} guests {listing.bedrooms} bedrooms {listing.beds} beds {listing.baths} baths </span>
+          </div>
+        </div>
+        <div className="listing-highlight">
+          <div className="listing-highlight_title" >
+            <span className="icon" aria-hidden="true">󱀁</span>
+            <div className="listing-highlight_title_name"> Great check-in experience </div>
+          </div>
+          <div className="listing-highlight_text">{listing.checkin_rating}</div>
+        </div>
+        <div className="listing-highlight">
+          <div className="listing-highlight_title" >
+            <span className="icon" aria-hidden="true">󱀁</span>
+            <div className="listing-highlight_title_name"> Great location </div>
+          </div>
+          <div className="listing-highlight_text">{listing.location_rating}</div>
+        </div>
+    </div>
+    </div>
+  )
+}
+
+export default Highlights;
+
+{/* div>
       <div>
         <div>
           <div className="container1"></div>
@@ -66,8 +98,4 @@ const Highlights = function(props) {
           </div>
         </div>
       </div>
-    </div>
-  )
-}
-
-export default Highlights;
+    </div> */}

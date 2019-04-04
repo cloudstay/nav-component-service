@@ -40,16 +40,12 @@ class App extends React.Component {
   render() {
     // console.log('listings:', this.state.listings[0]);
     return (
-      <div id="main">
-        <div className="main-container">
-          <div>
-            {this.state.listings[0] && <Title listing ={this.state.listings[0]}/>}
-            {this.state.listings[0] && <Highlights listing ={this.state.listings[0]}/>}
-            <Description />
-            <Amenities />
-            <SleepingArrangements />
-          </div>
-        </div>
+      <div id="listings">
+        {this.state.listings[0] && <Title listing ={this.state.listings[0]}/>}
+        {this.state.listings[0] && <Highlights listing ={this.state.listings[0]}/>}
+        <Description />
+        <Amenities />
+        <SleepingArrangements />
       </div>
     )
   }
