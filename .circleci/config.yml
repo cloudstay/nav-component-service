@@ -3,7 +3,7 @@ jobs:
   build:
     branches:
       only:
-        - create-db
+        - react-wip
     working_directory: ~/server
     # Specify a Docker image
     docker:

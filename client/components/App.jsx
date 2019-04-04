@@ -22,8 +22,6 @@ class App extends React.Component {
 
   getListing() {
     var listing_Id=window.location.search.slice(4,7);
-    // var randomListing = Math.floor(Math.random() * 100) + 100;
-    // console.log('random Listing:', randomListing);
     axios.get(`/rooms/api/${listing_Id}`)
     .then((response) => {
       console.log('send a get request to the server', response.data);
@@ -38,14 +36,14 @@ class App extends React.Component {
 
 
   render() {
-    // console.log('listings:', this.state.listings);
+    // console.log('listings:', this.state.listings[0]);
     return (
       <div id="main">
         <div className="main-container">
           <div>
-            <Title listing ={this.state.listings[0]}/>
-            <Highlights listing ={this.state.listings[0]}/>
-            <Description />
+            {this.state.listings[0] && <Title listing ={this.state.listings[0]}/>}
+            {this.state.listings[0] && <Highlights listing ={this.state.listings[0]}/>}
+            {this.state.listings[0] && <Description listing={this.state.listings[0]}/>}
             <Amenities />
             <SleepingArrangements />
           </div>

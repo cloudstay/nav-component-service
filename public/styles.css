@@ -35,62 +35,63 @@ img {
 
 #main {
   margin-top: 65px;
-  margin-left: -8px !important;
-  margin-right: -8px !important;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 #main:before{
-  content: " " !important;
-  display: table !important;
+  content: " ";
+  display: table;
 }
 
 #main:after{
-  content: " " !important;
-  display: table !important;
-  clear: both !important;
+  content: " ";
+  display: table;
+  clear: both;
 }
 
 .main-container{
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  min-height: 1px !important;
-  position: relative !important;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 1px;
+  position: relative;
 }
 
 /* Title */
 .header-container{
-  display:flex;
+  display: flex;
   flex-direction: row;
 }
 .title-container{
-  /* text-transform: uppercase!important; */
-  padding-left:8px!important;
-  padding-right:8px!important;
-  min-height:1px!important;
-  position:relative!important;
+  /* text-transform: uppercase; */
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 1px;
+  position: relative;
   width: 80%;
   float: left;
 }
 
 .main-title {
-  margin-left:-8px!important;
-  margin-right:-8px!important;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  min-height: 1px !important;
-  position: relative !important;
-  width: 83.33333333333334% !important;
-  float: left !important;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-left: 8px ;
+  padding-right: 8px ;
+  min-height: 1px ;
+  position: relative ;
+  width: 84%;
+  float: left ;
 }
 
 .main-title:before{
-  content:" "!important;
-  display:table!important;
+  content: " ";
+  display: table;
  }
+
  .main-title:after{
-  content:" "!important;
-  display:table!important;
-  clear:both!important;
+  content: " ";
+  display: table;
+  clear: both;
  }
 
 .listing-detail {
@@ -99,104 +100,142 @@ img {
 }
 
 .listing-title-text {
-  font-weight:800!important;
-  margin:0px!important;
-  word-wrap:break-word!important;
-  font-size:32px!important;
-  line-height:1em!important;
-  letter-spacing:normal!important;
-  font-family:Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif!important;
-  text-transform: capitalize!important;
-  color:#484848!important;
-  padding-top:6px!important;
-  padding-bottom:6px!important;
+  font-weight: 800;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 32px;
+  line-height: 1em;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: #484848;
+  padding-top: 6px;
+  padding-bottom: 6px;
   display: inline-block;
 }
 
 .listing-title-bold{
-  color:inherit!important;
-  font-size:1em!important;
-  font-weight:inherit!important;
-  line-height:inherit!important;
-  margin:0px!important;
-  padding:0px!important;
-  display:inline!important;
+  color: inherit;
+  font-size: 1em;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0px;
+  padding: 0px;
+  display: inline;
 }
 
-.city-container{
-  display: table !important;
-  width: 100% !important;
-  border-spacing: 0px !important;
+.container1{
+  display: table;
+  width: 100%;
+  border-spacing: 0px;
 }
 
-.city {
-  margin:0px!important;
-  word-wrap:break-word!important;
-  font-size:16px!important;
-  line-height:22px!important;
-  letter-spacing:normal!important;
-  text-transform:undefined!important;
-  color:#484848!important;
-  padding-top:6px!important;
-  padding-bottom: 6px!important;
-  padding-left: 8px!important;
-  padding-right: 8px!important;
-  font-weight:normal!important;
+.text {
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-transform: undefined;
+  color :#484848;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: normal;
 }
 
 .host-container{
-  padding-left:8px!important;
-  padding-right:8px!important;
-  min-height:1px!important;
-  position:relative!important;
-  width: 16.666666666666664% !important;
-  float: left !important;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 1px;
+  position: relative;
+  width: 17%;
+  float: left;
 }
 
 .host-box{
-  color: #767676 !important;
-  text-align: center !important;
+  color: #767676;
+  text-align: center;
 }
 
 .host-image-box{
   height: 64px;
   width: 64px;
   display: block;
-  position:relative!important;
-  margin:0 auto!important;
+  position:relative;
+  margin:0 auto;
 }
 
 .host-picture{
-  background: var(--color-clear, transparent) !important;
-  border: 0px !important;
-  cursor: pointer !important;
-  margin: 0px !important;
-  padding: 0px !important;
+  background: transparent;
+  border: 0px;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
 }
 
 .host-image{
-  background-color: #D8D8D8 !important;
-  border-radius: 50% !important;
-  border-width:  2px !important;
-  border-color: #ffffff !important;
-  background-color: #D8D8D8 !important;
-  border-radius: 50% !important;
-  border-width: 2px !important;
-  border-style: solid !important;
-  border-color: #ffffff !important;
-  /* vertical-align: middle !important; */
-  overflow: hidden !important;
-  display: block !important;
+  background-color: #D8D8D8;
+  border-radius: 50%;
+  border-width:  2px;
+  border-color: #ffffff;
+  background-color: #D8D8D8;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffffff ;
+  /* vertical-align: middle ; */
+  overflow: hidden;
+  display: block;
 }
 
 .host-name{
-  margin: 0px !important;
-  word-wrap: break-word !important;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  line-height: 1.2857142857142858em !important;
-  color: #767676 !important;
-  padding-top:6px!important;
-  padding-bottom: 6px!important;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4em;
+  color: #767676;
+  padding-top:6px;
+  padding-bottom: 6px;
+}
+
+/* Highlights */
+.type-container {
+  display: table;
+  width: 100%;
+  border-spacing: 0px;
+}
+
+.icon-container {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.icons {
+  width: 16px;
+}
+
+.info-container {
+  display: table-cell;
+  width: 100%;
+  vertical-align: top;
+}
+
+.info-header{
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 600 ;
+  line-height: 1.4em;
+  color: #484848;
+}
+
+.info {
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4em;
+  color: #484848;
 }
