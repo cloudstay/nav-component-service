@@ -76,4 +76,3 @@ const getData = (callback) => {
 
 module.exports.createListing = createListing;
 module.exports.getData = getData;
-// createListing();

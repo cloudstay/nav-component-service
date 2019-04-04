@@ -1,4 +1,3 @@
-
 const Listings = require('../database/schema.js')
 
 describe('whether the database is seeded', function() {
