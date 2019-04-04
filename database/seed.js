@@ -53,9 +53,27 @@ let createListing = () => {
         type_of_bed: Type_Of_Beds[Math.floor(Math.random() * Type_Of_Beds.length)],
         no_of_beds: bedCount
       }]
+    }, (error) => {
+      if (error) {
+        console.log('Oops! Something error has caused while seeding data', error);
+      } else {
+        console.log('Data has been saved');
+      }
     })
   }
  console.log('data seeded');
 }
 
-createListing();
+const getData = (callback) => {
+  Listings.find({}, (error, data) => {
+    if(error) {
+      console.log("Was not able to find data ", error);
+    } else {
+      callback(data);
+    }
+  })
+}
+
+module.exports.createListing = createListing;
+module.exports.getData = getData;
+// createListing();
