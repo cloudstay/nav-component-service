@@ -13,8 +13,8 @@ const Title = function(props) {
               <h1 className="listing-title-bold">{name}</h1>
             </span>
           </div>
-          <div style={{marginBottom: 16}} className="city-container">
-            <div className="city">
+          <div style={{marginBottom: 16}} className="container1">
+            <div className="text">
               {listing.city}
             </div>
           </div>
