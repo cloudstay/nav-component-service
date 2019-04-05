@@ -6,7 +6,7 @@ const Title = function(props) {
     // console.log('props', listing.city);
     let name = listing.listing_name.charAt(0).toUpperCase() + listing.listing_name.slice(1)
     return (
-      <div className="header-container" style={{marginTop: 24, marginBottom: 24}}>
+      <div className="header-container" style={{marginTop: 24, marginBottom: 8}}>
         <div className="main-title">
           <div className="title-container" style={{marginBottom: 6}}>
             <span className="listing-title-text">

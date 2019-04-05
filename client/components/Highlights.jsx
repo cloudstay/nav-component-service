@@ -6,7 +6,7 @@ const Highlights = function(props) {
     return (
       <div>
         <div className="container1"></div>
-          <div style={{marginTop: 16}}>
+          <div style={{marginTop: 8}}>
             <div className="icon-container">
               <div style={{marginRight: 8}}>
                 <div className="icons">
@@ -22,7 +22,7 @@ const Highlights = function(props) {
               <span aria-hidden="true"> . </span>
               <span className="text">{listing.beds === 1 ? '1 Bed' : listing.beds.toString() + ' Beds'}</span>
               <span aria-hidden="true"> . </span>
-              <span className="text">{listing.baths === 1 ? '1 Bath' : listing.bath.toString() + ' Baths'}</span>
+              <span className="text">{listing.baths === 1 ? '1 Bath' : listing.baths.toString() + ' Baths'}</span>
               </div>
             </div>
             <div style={{marginTop: 16}}>

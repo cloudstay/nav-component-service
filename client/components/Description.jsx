@@ -31,7 +31,7 @@ const Description = function(props) {
           <div style={{marginTop: 24}}>
             <span className="info-header">
               <button type="button" className="button" aria-expanded="false" aria-busy="false">
-                Contact Host
+                <a className="button" href="#">Contact Host</a>
                 </button>
             </span>
           </div>
