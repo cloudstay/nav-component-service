@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faKey, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Highlights = function(props) {
   let listing = props.listing;
@@ -10,7 +12,9 @@ const Highlights = function(props) {
             <div className="icon-container">
               <div style={{marginRight: 8}}>
                 <div className="icons">
-                  <span className="icon" aria-hidden="true">󱀁</span>
+                  <span className="icon" aria-hidden="true">
+                    <FontAwesomeIcon icon={faHome} />
+                  </span>
                 </div>
               </div>
             </div>
@@ -30,7 +34,9 @@ const Highlights = function(props) {
                 <div className="icon-container">
                   <div style={{marginRight: 8}}>
                     <div className="icons">
-                      <span className="icon" aria-hidden="true">󱀁</span>
+                      <span className="icon" aria-hidden="true">
+                      <FontAwesomeIcon icon={faKey} />
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -45,7 +51,9 @@ const Highlights = function(props) {
                 <div className="icon-container">
                   <div style={{marginRight: 8}}>
                     <div className="icons">
-                      <span className="icon" aria-hidden="true">󱀁</span>
+                      <span className="icon" aria-hidden="true">
+                      <FontAwesomeIcon icon={faMapMarkerAlt} />
+                      </span>
                     </div>
                   </div>
                 </div>
