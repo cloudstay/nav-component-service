@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faKey, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Highlights = function(props) {
   let listing = props.listing;
@@ -8,7 +10,9 @@ const Highlights = function(props) {
        <div className="listing-highlights-section">
         <div className="listing-highlight">
           <div className="listing-highlight_title" >
-            <span className="icon" aria-hidden="true">󱀁</span>
+            <span className="icon" aria-hidden="true">
+              <FontAwesomeIcon icon={faHome} />
+            </span>
             <div className="listing-highlight_title_name">{listing.type_of_listings}</div>
           </div>
           <div className="listing-highlight_details" >
@@ -20,18 +24,23 @@ const Highlights = function(props) {
         </div>
         <div className="listing-highlight">
           <div className="listing-highlight_title" >
-            <span className="icon" aria-hidden="true">󱀁</span>
+            <span className="icon" aria-hidden="true">
+              <FontAwesomeIcon icon={faKey} />
+            </span>
             <div className="listing-highlight_title_name"> Great check-in experience </div>
           </div>
           <div className="listing-highlight_text">{listing.checkin_rating}</div>
         </div>
         <div className="listing-highlight">
           <div className="listing-highlight_title" >
-            <span className="icon" aria-hidden="true">󱀁</span>
+            <span className="icon" aria-hidden="true">
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+            </span>
             <div className="listing-highlight_title_name"> Great location </div>
           </div>
           <div className="listing-highlight_text">{listing.location_rating}</div>
         </div>
+        <div className="line"></div>
     </div>
     </div>
   )
