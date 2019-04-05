@@ -43,7 +43,7 @@ class App extends React.Component {
       <div id="listings">
         {this.state.listings[0] && <Title listing ={this.state.listings[0]}/>}
         {this.state.listings[0] && <Highlights listing ={this.state.listings[0]}/>}
-        <Description />
+        {this.state.listings[0] && <Description listing ={this.state.listings[0]}/>}
         <Amenities />
         <SleepingArrangements />
       </div>
