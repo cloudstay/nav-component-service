@@ -313,6 +313,13 @@ img {
   color: #484848;
 }
 
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
 .amenities-container {
   padding-left: 8px;
   padding-right: 8px;
@@ -337,6 +344,35 @@ img {
   word-wrap: break-word;
   font-size: 16px;
   font-weight: 400;
+  text-transform: capitalize;
   line-height: 1.375em;
   color: #484848;
+}
+
+/* Modal */
+.modal-section {
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding: 32px;
+}
+
+.close-container {
+  margin-bottom: 24px;
+}
+
+.amenities-header-container{
+  padding-bottom: 24px;
+  padding-top: 0px;
+  border-bottom: 0px;
+}
+
+.amenities-header{
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25em;
+  color: #484848;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }

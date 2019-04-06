@@ -3,7 +3,7 @@ jobs:
   build:
     branches:
       only:
-        - description
+        - amenities
     working_directory: ~/server
     # Specify a Docker image
     docker:
