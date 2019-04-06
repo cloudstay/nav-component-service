@@ -4,7 +4,7 @@ import { faHome, faKey, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons
 
 const Highlights = function(props) {
   let listing = props.listing;
-  //  console.log('props', listing.city);
+   console.log('props', listing);
   return (
     <div className="listing">
        <div className="listing-highlights-section">
@@ -16,9 +16,9 @@ const Highlights = function(props) {
             <div className="listing-highlight_title_name">{listing.type_of_listings}</div>
           </div>
           <div className="listing-highlight_details" >
-            <span className="listing-highlight_text">{listing.max_guests === 1 ? '1 Guest' : listing.max_guests.toString() + ' Guests . '}
-            {listing.bedrooms === 0 ? 'Studio' : listing.bedrooms === 1 ? '1 Bedroom' : `${listing.bedrooms} Bedrooms . `}
-            {listing.beds === 1 ? '1 Bed' : listing.beds.toString() + ' Beds . '}
+            <span className="listing-highlight_text">{listing.max_guests === 1 ? '1 Guest . ' : listing.max_guests.toString() + ' Guests . '}
+            {listing.bedrooms === 0 ? 'Studio . ' : listing.bedrooms === 1 ? '1 Bedroom . ' : `${listing.bedrooms} Bedrooms . `}
+            {listing.beds === 1 ? '1 Bed . ' : listing.beds.toString() + ' Beds . '}
             {listing.baths === 1 ? '1 Bath' : listing.baths.toString() + ' Baths'} </span>
           </div>
         </div>

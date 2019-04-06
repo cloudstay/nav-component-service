@@ -1,5 +1,9 @@
 * {
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+body {
+  background-color: #fff;
   color: #484848;
 }
 
