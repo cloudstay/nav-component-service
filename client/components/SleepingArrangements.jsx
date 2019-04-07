@@ -1,22 +1,32 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBed } from '@fortawesome/free-solid-svg-icons';
 
-const SleepingArrangements = function(props) {
-  let sleepingArrangements = props.sleepingArrangements;
-  console.log(sleepingArrangements)
-  return (
-    <div className="main">
-      <div className="title">Sleeping arrangements</div>
-        <div className="container">
-          {/* {sleep_arrangement && sleep_arrangement.map( (item, index) =>  */}
-            <div className="box">
-              {/* <img src={beds} className={icon} /> */}
-              {/* <div className="type">{item === 'sofa bed' ? 'Common spaces' : `Bedroom ${titleIcons[2].label}`}</div> */}
-              {/* <div className={bed}>{item}</div> */}
-            </div>
-          {/* )} */}
-        </div>
-    </div>
-  )
+class SleepingArrangements extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+
+    }
+  }
+
+  render() {
+    let sleepingArrangements = this.props.sleepingArrangements;
+    console.log('sleepingArrangements: ', this.props.sleepingArrangements)
+    return (
+      <div className="main">
+        <div className="title">Sleeping arrangements</div>
+          <div className="container">
+            {sleepingArrangements && sleepingArrangements.map( (item, index) =>
+              <div className="box" key={index}>
+                <FontAwesomeIcon icon={faBed} style={{marginBottom: 24}}/>
+                <div style={{marginBottom: 8}}>Bedroom {index + 1}</div>
+                <div className="bed">{item}</div>
+              </div>)}
+          </div>
+      </div>
+    )
+  }
 }
 
 export default SleepingArrangements;
