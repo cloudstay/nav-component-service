@@ -10,11 +10,11 @@ const Title = function(props) {
         <div className="listing-title-section">
           <div className="listing-title">
             <h1 className="listing-title-bold">{name}</h1>
-            <h5>{listing.city}</h5>
+            <div className="listing-city">{listing.city}</div>
           </div>
           <div className="host-image-box">
             <img src={listing.host_picture_url} className="host-picture host-image" alt={listing.host_name}/>
-            <h5>{listing.host_name}</h5>
+            <div>{listing.host_name}</div>
           </div>
         </div>
       </div>
