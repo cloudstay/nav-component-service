@@ -4,7 +4,11 @@
 
 body {
   background-color: #fff;
-  color: #484848;
+  width: 610px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: 57px;
+  margin-right: 57px;
 }
 
 .line {
@@ -19,9 +23,9 @@ body {
 #listings {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 45%;
+  margin-left: -8px;
+  margin-right: -8px;
+  width: 100%;
   text-align: left;
 }
 
@@ -46,16 +50,30 @@ body {
 
 .listing-title h1 {
   display: flex;
-  margin-bottom: 0px;
+  margin-bottom: 6px;
+  margin: 0px;
+  font-weight: 600;
 }
 
-.listing-title h3 {
+.listing-title{
   display: flex;
   margin-top: 10px;
 }
 
 .listing-title-bold{
   display: flex;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.listing-city{
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: #484848;
+  margin-bottom: 24px;
 }
 
 .host-image-box{
@@ -85,10 +103,18 @@ body {
 .listing-highlight_title{
   display: flex;
   flex-direction: row;
+  vertical-align: top;
+  height: 20px;
 }
 
 .listing-highlight_title_name{
   padding-left: 10px;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.375em;
+  color: #484848;
 }
 
 .listing-highlight_details{
@@ -97,7 +123,16 @@ body {
 }
 
 .listing-highlight_text{
-  padding-left: 23px;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: #484848;
+  box-sizing: border-box;
+  width: 635px;
+  padding-left: 35px;
+  padding-right: 0px;
 }
 
 img {
@@ -110,6 +145,11 @@ img {
 .description {
   box-sizing: border-box;
   padding-top: 5px;
+  width: 610px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: #484848;
 }
 
 .text {
@@ -118,6 +158,11 @@ img {
   font-weight: 400;
   line-height: 1.375em;
   color: #484848;
+  padding-left: 10px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  width: 600px;
+  height: 100px;
 }
 
 .read-more {
@@ -133,13 +178,23 @@ img {
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .listing-amenities_wrapper{
   display: grid;
-  grid-template-columns: 300px 200px;
+  grid-template-columns: 350px 350px;
   grid-template-rows: 40px 40px 40px;
+}
+
+.listing-amenity-name{
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4em;
+  padding-left: 0px;
+  padding-right: 8px;
 }
 
 .show-all{
@@ -148,6 +203,31 @@ img {
   margin-bottom: 25px;
   font-weight: 600;
   text-align: left;
+}
+
+.close-btn{
+  color: #767676;
+  font-size: 20px;
+  font-weight: 200;
+  background-color: transparent;
+  border-width: 0px;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-style: solid;
+  border-width: 1px;
+  padding: 1px 7px 2px;
+  fill: rgb(118, 118, 118);
+  border-radius: 80%;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 1px 1px #DBDBDB;
+  cursor: pointer;
+}
+
+.amenities-detail{
+  font-size: 20px;
+  font-weight: 200;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: thin solid #DBDBDB;
 }
 
 /* Sleeping Arrangements */
