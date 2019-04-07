@@ -284,6 +284,7 @@ img {
   -ms-user-select: auto;
   user-select: auto;
   text-align: left;
+  height: 25px;
 }
 
 .read-more{
@@ -304,7 +305,11 @@ img {
 }
 
 /* Amenities */
-.sub-header{
+.listing-amenities{
+  height: 200px;
+}
+
+.sub-header {
   margin: 5px;
   word-wrap: break-word;
   font-size: 16px;
@@ -313,25 +318,27 @@ img {
   color: #484848;
 }
 
-table {
-  display: table;
-  border-collapse: separate;
-  border-spacing: 2px;
-  border-color: grey;
+.listing-amenities-container{
+  height: 100px;
+  margin-left: 5px;
+}
+
+.listing-amenities_wrapper{
+  display: grid;
+  grid-template-columns: 350px 350px;
+  grid-template-rows: 40px 40px;
 }
 
 .amenities-container {
-  padding-left: 8px;
-  padding-right: 8px;
   min-height: 1px;
   position: relative;
   width: 50%;
   float: left;
+  height: 100px;
 }
 
 .amenity-container{
   width: 100%;
-  table-layout: fixed;
   border: 0px;
 }
 
@@ -350,6 +357,19 @@ table {
 }
 
 /* Modal */
+.show-all{
+  color: #008489;
+  background: transparent;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+  user-select: auto;
+  font-weight: 400'
+}
+
 .modal-section {
   background-color: rgb(255, 255, 255);
   box-sizing: border-box;
@@ -360,10 +380,21 @@ table {
   margin-bottom: 24px;
 }
 
-.amenities-header-container{
-  padding-bottom: 24px;
-  padding-top: 0px;
-  border-bottom: 0px;
+.close-btn{
+  color: #767676;
+  font-size: 20px;
+  font-weight: 200;
+  background-color: transparent;
+  border-width: 0px;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-style: solid;
+  border-width: 1px;
+  padding: 1px 7px 2px;
+  fill: rgb(118, 118, 118);
+  border-radius: 80%;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 1px 1px #DBDBDB;
+  cursor: pointer;
 }
 
 .amenities-header{
@@ -375,4 +406,12 @@ table {
   color: #484848;
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.listing-amenities-detail{
+  font-size: 20px;
+  font-weight: 200;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: thin solid #DBDBDB;
 }
