@@ -41,7 +41,7 @@ const Highlights = function(props) {
           <div className="listing-highlight_text">{listing.location_rating}</div>
         </div>
         <div className="line"></div>
-    </div>
+      </div>
     </div>
   )
 }

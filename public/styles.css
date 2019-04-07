@@ -127,3 +127,71 @@ img {
   line-height: 1.375em;
   cursor: pointer;
 }
+
+/* Amenities */
+.listing-amenities_title{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 18px;
+}
+
+.listing-amenities_wrapper{
+  display: grid;
+  grid-template-columns: 300px 200px;
+  grid-template-rows: 40px 40px 40px;
+}
+
+.show-all{
+  color: #008489;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Sleeping Arrangements */
+.main {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  color: #484848;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 190px 200px;
+  grid-template-rows: 175px;
+  grid-column-gap: 18px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 18px;
+  border-top: thin solid #DBDBDB;
+  width: 566px;
+  padding-top: 28px;
+}
+
+.box {
+  border: thin solid #DBDBDB;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 25px;
+}
+
+.type {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.bed {
+  font-size: 16px;
+  font-weight: 200;
+}
