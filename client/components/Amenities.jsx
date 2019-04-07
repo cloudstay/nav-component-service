@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import uuidv4 from 'uuid/v4';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const customStyles = {
   content : {
@@ -48,7 +49,7 @@ class Amenities extends React.Component {
     for (let key in amenities) {
       if(key !== '_id'){
         if(amenities[key]) {
-          amenitiesArray.push(<div key={uuidv4()}>{key}</div>)
+          amenitiesArray.unshift(<div key={uuidv4()}>{key}</div>)
         } else {
           amenitiesArray.push(<div key={uuidv4()}><s>{key}</s></div>)
         }
@@ -61,10 +62,9 @@ class Amenities extends React.Component {
           Amenities
         </div>
         <div className="listing-amenities_wrapper">
-  	      {amenitiesArray && amenitiesArray.map((item, index) =>
-            <div className="icon" key={index}>
-  		        {/* <img className={image} src={item.url} /> */}
-  		        <span> {item}</span>
+  	      {amenitiesArray && amenitiesArray.slice(0, 4).map((item, index) =>
+            <div className="listing-amenity-name" key={index}>
+  		        <span>{item}</span>
   		      </div>)}
         </div>
         <div id="amenitiesModal">
@@ -82,10 +82,9 @@ class Amenities extends React.Component {
               <button type='button' className="close-btn" onClick={this.handleCloseModal}>X</button>
             </div>
             <h1 className="modal-title">Amenities</h1>
-            <div className="modal-header">Basic</div>
-            {amenitiesArray.map((item, index) =>
-              <div className="amenities-detail" key={index}>{item}</div>
-            )}
+              {amenitiesArray.map((item, index) =>
+                <div className="amenities-detail" key={index}>{item}</div>
+              )}
           </Modal>
         </div>
       </div>
@@ -94,30 +93,3 @@ class Amenities extends React.Component {
 }
 
 export default Amenities;
-
-<div className={main}>
-      <div className={modal}>
-        <button type='button' className={close} onClick={togglePopup}>X</button>
-        <div>
-          <h1 className={title}>Amenities</h1>
-          <div className={header}>Basic</div>
-          {amenities_basics.map( (item, index) => <div className={detail} key={index}>{item}</div>)}
-        </div>
-        <div>
-          {amenities_info.map( section => {
-            return section.map( (info, index) => {
-              if (index === 0) {
-                return <div className={header} key={index}>{info}</div>
-              } else {
-                return <div className={detail} key={index}>{info}</div>
-              }
-            }) 
-          })}
-        </div>
-        <div>
-          <div className={header}>Not included</div>
-          {not_included[0].split(' ').map( (detail, index) => <div className={dashed} key={index}>{detail}</div>)}
-        </div>
-      </div>
-      <div className={backdrop} onClick={togglePopup}/>
-    </div>
