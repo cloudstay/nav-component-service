@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBed, faArrowCircleRight, faArrowCircleLeft} from '@fortawesome/free-solid-svg-icons';
+import { faBed, faChevronCircleRight, faChevronCircleLeft} from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesome } from 'react-fontawesome';
 
 class SleepingArrangements extends React.Component {
@@ -69,7 +69,7 @@ class SleepingArrangements extends React.Component {
             <div onClick={()=> this.handleArrowClick("left")} className="arrow-btn" style={{marginRight: -16}}>
               <span className="sa-arrow-btn">
                 <button type='button' className="arrow-btn" onClick={this.handleCloseModal}>
-                  <FontAwesomeIcon style={{gridColumnGap: 10}} icon={faArrowCircleLeft}/>
+                  <FontAwesomeIcon style={{gridColumnGap: 10}} icon={faChevronCircleLeft}/>
                 </button>
               </span>
             </div>}
@@ -91,7 +91,7 @@ class SleepingArrangements extends React.Component {
               <div onClick={()=> this.handleArrowClick("right")} className="arrow-btn" style={{marginRight: -16}}>
               <span className="sa-arrow-btn">
                   <button type='button' className="arrow-btn" onClick={this.handleCloseModal}>
-                    <FontAwesomeIcon style={{gridColumnGap: 10}} icon={faArrowCircleRight}/> 
+                    <FontAwesomeIcon icon={faChevronCircleRight}/>
                   </button>
                 </span>
               </div>}
