@@ -16,21 +16,28 @@ const listingSchema = new Schema({
   checkin_rating: String,
   description: String,
   amenities: [{
-    essentials: Boolean,
-    self_checkin: Boolean,
+    kitchen: Boolean,
+    iron: Boolean,
+    free_parking_on_premise: Boolean,
     wifi: Boolean,
-    tv: Boolean,
-    hairdryer: Boolean,
     hangers: Boolean,
-    shampoo: Boolean,
     laptop_friendly_workspace: Boolean,
+    tv: Boolean,
+    self_checkin: Boolean,
+    dishes: Boolean,
+    dryer: Boolean,
+    washer: Boolean,
+    essentials: Boolean,
+    hairdryer: Boolean,
+    shampoo: Boolean,
     carbon_monoxide_detector: Boolean,
-    smoke_detector: Boolean
+    smoke_detector: Boolean,
+    first_aid_kit: Boolean,
+    air_conditioning: Boolean,
+    hot_tub:Boolean,
+    fire_extinguisher: Boolean
   }],
-  sleeping_arrangements: [{
-    type_of_bed: String,
-    no_of_beds: Number
-  }]
+  sleeping_arrangements: [String]
 })
 
 let Listings = mongoose.model('List', listingSchema); // list is all your documents

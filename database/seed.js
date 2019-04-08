@@ -20,7 +20,7 @@ const Type_Of_Beds = [
 let createListing = () => {
   for( let data = 100; data < 200; data++) {
     let dp = Math.floor(Math.random() * (36 - 1 + 1)) + 1;
-    let bedCount = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    let no_of_beds = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     let dataId = data;
     let listingName = faker.lorem.sentences(1);
     Listings.create({
@@ -29,30 +29,37 @@ let createListing = () => {
       host_picture_url: `https://s3-us-west-1.amazonaws.com/hostprofilepicture/${dp}.jpg`,
       host_name: faker.name.findName(),
       city: faker.address.city(),
-      max_guests: faker.random.number({min: 1, max: 6}),
+      max_guests: no_of_beds * 2,
       type_of_listings: Type_Of_Listings[Math.floor(Math.random() * Type_Of_Listings.length)],
-      bedrooms: faker.random.number({min: 1, max: 6}),
-      beds: bedCount,
+      bedrooms: no_of_beds,
+      beds: no_of_beds,
       baths: faker.random.number({min: 1, max: 5}),
       location_rating: faker.lorem.sentences(1),
       checkin_rating: faker.lorem.sentences(1),
       description: faker.lorem.paragraphs(faker.random.number({ min: 4, max: 7 })),
       amenities: [{
-        essentials: faker.random.boolean(),
-        self_checkin: faker.random.boolean(),
+        kitchen: faker.random.boolean(),
+        iron: faker.random.boolean(),
+        free_parking_on_premise: faker.random.boolean(),
         wifi: faker.random.boolean(),
-        tv: faker.random.boolean(),
-        hairdryer: faker.random.boolean(),
         hangers: faker.random.boolean(),
-        shampoo: faker.random.boolean(),
         laptop_friendly_workspace: faker.random.boolean(),
+        tv: faker.random.boolean(),
+        self_checkin: faker.random.boolean(),
+        dishes: faker.random.boolean(),
+        dryer: faker.random.boolean(),
+        washer: faker.random.boolean(),
+        essentials: faker.random.boolean(),
+        hairdryer: faker.random.boolean(),
+        shampoo: faker.random.boolean(),
         carbon_monoxide_detector: faker.random.boolean(),
-        smoke_detector: faker.random.boolean()
+        smoke_detector: faker.random.boolean(),
+        first_aid_kit: faker.random.boolean(),
+        air_conditioning: faker.random.boolean(),
+        hot_tub:faker.random.boolean(),
+        fire_extinguisher: faker.random.boolean()
       }],
-      sleeping_arrangements: [{
-        type_of_bed: Type_Of_Beds[Math.floor(Math.random() * Type_Of_Beds.length)],
-        no_of_beds: bedCount
-      }]
+      sleeping_arrangements: generateSleepingArrangements(no_of_beds),
     }, (error) => {
       if (error) {
         console.log('Oops! Something error has caused while seeding data', error);
@@ -62,6 +69,16 @@ let createListing = () => {
     })
   }
  console.log('data seeded');
+}
+
+const generateSleepingArrangements = (no_of_beds) => {
+  // console.log("no_of_beds: ", no_of_beds)
+  let sleepingArrangementsArray = [];
+  for (let i = 0; i < no_of_beds; i++) {
+    sleepingArrangementsArray.push(Type_Of_Beds[Math.floor(Math.random() * Type_Of_Beds.length)]);
+  }
+  // console.log('bed type: ', sleepingArrangementsArray)
+  return sleepingArrangementsArray;
 }
 
 const getData = (callback) => {
