@@ -12,8 +12,6 @@ class SleepingArrangements extends React.Component {
     this.handleArrowClick = this.handleArrowClick.bind(this);
   }
 
-  //show right arrow, if SA length is greater than 3
-    //set this.state.RA to true
 
   componentDidMount(){
     this.setState({
@@ -23,7 +21,7 @@ class SleepingArrangements extends React.Component {
   }
 
   handleArrowClick (direction) {
-    console.log("clicked direction ", direction)
+    // console.log("clicked direction ", direction)
     if (direction === "right" && this.state.sleepingArrangements.length > this.state.end) {
       this.setState({
         start: this.state.end
@@ -52,8 +50,8 @@ class SleepingArrangements extends React.Component {
 
 
   render() {
-    console.log('sleepingArrangements: ', this.props.sleepingArrangements.slice('_').join(' '))
-    console.log("current state: ", this.state)
+    // console.log('sleepingArrangements: ', this.props.sleepingArrangements.slice('_').join(' '))
+    // console.log("current state: ", this.state)
     return (
       <div style={{marginBottom: 0, marginTop: 30}}>
         <section>
@@ -82,7 +80,7 @@ class SleepingArrangements extends React.Component {
                 }
               })
             }
-            {this.state.end &&
+            {(this.state.end < 3) &&
               <div onClick={()=> this.handleArrowClick("right")} className="arrow-btn">
               <span className="arrow-container">
                   <button type='button' className="right-button-container right-button" onClick={this.handleCloseModal}></button>
