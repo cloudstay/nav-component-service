@@ -80,7 +80,7 @@ class SleepingArrangements extends React.Component {
                 }
               })
             }
-            {(this.state.end < 3) &&
+            {(this.state.end <= 2) &&
               <div onClick={()=> this.handleArrowClick("right")} className="arrow-btn">
               <span className="arrow-container">
                   <button type='button' className="right-button-container right-button" onClick={this.handleCloseModal}></button>
