@@ -16,13 +16,14 @@ app.use('/rooms/', express.static(path.join(__dirname, '../public')));
 
 
 // get request
-app.get('/rooms/api/:id', function(req, res) {
-  console.log('Received get request for listings: ', req.params);
-  Listings.find({listing_id: req.params.id}, function(err, listingData) {
+app.get(`/rooms/listing/api/`, function(req, res) {
+  console.log(req.query)
+  // console.log('Received get request for listings: ', req.params);
+  let id=req.query.id
+  Listings.find({listing_id: id}, function(err, listingData) {
     if(err) {
       console.log('err', err)
     }
-    console.log('All the details of listing', listingData)
     res.json(listingData);
   });
 })

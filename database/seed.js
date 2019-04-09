@@ -81,8 +81,8 @@ const generateSleepingArrangements = (no_of_beds) => {
   return sleepingArrangementsArray;
 }
 
-const getData = (callback) => {
-  Listings.find({}, (error, data) => {
+const getData = (id, callback) => {
+  Listings.find({listing_id: id}, (error, data) => {
     if(error) {
       console.log("Was not able to find data ", error);
     } else {
