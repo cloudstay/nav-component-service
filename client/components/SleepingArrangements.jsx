@@ -55,7 +55,7 @@ class SleepingArrangements extends React.Component {
 
 
   render() {
-    console.log('sleepingArrangements: ', this.props.sleepingArrangements)
+    console.log('sleepingArrangements: ', this.props.sleepingArrangements.slice('_').join(' '))
     console.log("current state: ", this.state)
     return (
       <div style={{marginBottom: 0, marginTop: 30}}>
@@ -65,15 +65,13 @@ class SleepingArrangements extends React.Component {
               <div className="sub-header">Sleeping Arrangements</div>
             </h2>
           </div>
-          {(this.state.start > 0) &&
-            <div onClick={()=> this.handleArrowClick("left")} className="arrow-btn" style={{marginRight: -16}}>
-              <span className="sa-arrow-btn">
-                <button type='button' className="arrow-btn" onClick={this.handleCloseModal}>
-                  <FontAwesomeIcon style={{gridColumnGap: 10}} icon={faChevronCircleLeft}/>
-                </button>
-              </span>
-            </div>}
           <div className="listing-sa-container">
+            {(this.state.start > 0) &&
+              <div onClick={()=> this.handleArrowClick("left")} className="arrow-btn" style={{marginRight: -30}}>
+                <span className="arrow-container">
+                  <button type='button' className="left-button-container left-button" onClick={this.handleCloseModal}></button>
+                </span>
+              </div>}
             {
               this.state.sleepingArrangements && this.state.sleepingArrangements.map( (item, index) => {
                 if ((index === 0 && this.state.start === 0) || (index > this.state.start && index <= this.state.end)) {
@@ -88,11 +86,9 @@ class SleepingArrangements extends React.Component {
               })
             }
             {this.state.end &&
-              <div onClick={()=> this.handleArrowClick("right")} className="arrow-btn" style={{marginRight: -16}}>
-              <span className="sa-arrow-btn">
-                  <button type='button' className="arrow-btn" onClick={this.handleCloseModal}>
-                    <FontAwesomeIcon icon={faChevronCircleRight}/>
-                  </button>
+              <div onClick={()=> this.handleArrowClick("right")} className="arrow-btn">
+              <span className="arrow-container">
+                  <button type='button' className="right-button-container right-button" onClick={this.handleCloseModal}></button>
                 </span>
               </div>}
           </div>
