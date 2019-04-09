@@ -408,27 +408,33 @@ img {
   padding-bottom: 2px;
 }
 
+.amenity-icon{
+  height: 1em;
+}
+
 .listing-amenities-detail{
   font-size: 20px;
   font-weight: 200;
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: thin solid #DBDBDB;
+  text-transform: capitalize;
 }
 
 /* Sleeping Arrangement */
 .listing-sa-container{
   display: flex;
   flex-direction: row;
-  width:675px;;
+  width:640px;;
   justify-content: flex-start;
-  margin-left: 100px;
+  margin-left: 40px;
   padding: 0px;
 }
 
 .box{
+  position: relative;
   padding: 20px;
-  width: 150px;
+  width: 130px;
   height: 115px;
   margin-top: 10px;
   border-width: 1px;
@@ -439,6 +445,10 @@ img {
   padding: 24px;
   margin: 20px;
   line-height: 1px;
+}
+
+.bed-icon{
+  width: 30px;
 }
 
 .bed {
@@ -464,9 +474,11 @@ img {
   background-repeat: no-repeat;
   padding: 10px;
   border-radius: 20px;
+  z-index: 1000;
 }
 
 .left-button{
+  position: absolute;
   height: 40px;
   width: 40px;
   display: inline-block;
@@ -489,6 +501,7 @@ img {
 }
 
 .right-button{
+  position: absolute;
   height: 40px;
   width: 40px;
   display: inline-block;
@@ -498,4 +511,8 @@ img {
   background-position-y: 50%;
   background-repeat: no-repeat;
   padding: 20px;
+}
+
+.info {
+  text-transform: capitalize;
 }

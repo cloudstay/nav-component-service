@@ -1,7 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBed, faChevronCircleRight, faChevronCircleLeft} from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesome } from 'react-fontawesome';
 
 class SleepingArrangements extends React.Component {
   constructor(props) {
@@ -77,9 +74,9 @@ class SleepingArrangements extends React.Component {
                 if ((index === 0 && this.state.start === 0) || (index > this.state.start && index <= this.state.end)) {
                   return (
                     <div className="box" key={index}>
-                    <FontAwesomeIcon icon={faBed} style={{marginBottom: 24}}/>
+                    <img className="bed-icon" src={`images/bed.svg`}></img>
                     <div style={{marginBottom: 8, marginLeft: -5}} className="info-header">Bedroom {index + 1}</div>
-                    <div className="info" style={{marginLeft: -5}}>{item}</div>
+                    <div className="info" style={{marginLeft: -5}}>{item.split('_').join(' ')}</div>
                     </div>
                   )
                 }
