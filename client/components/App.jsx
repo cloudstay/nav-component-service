@@ -21,13 +21,9 @@ class App extends React.Component {
 
 
   getListing() {
-    var listing_Id=window.location.search.slice(4,7);
-    // console.log(listing_Id);
-    axios.get(`/rooms/listing/api/`, {
-      params : {
-        id : listing_Id
-      }
-    })
+    var listing_Id=window.location.pathname.split('/')[2];
+    console.log(listing_Id);
+    axios.get(`/api/rooms/${listing_Id}/listing`)
     .then((response) => {
       console.log('send a get request to the server', response.data);
       this.setState({
@@ -38,6 +34,7 @@ class App extends React.Component {
       console.log('Error in retrieving listings: ', error)
     })
   }
+
 
 
   render() {

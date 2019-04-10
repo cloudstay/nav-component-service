@@ -12,18 +12,17 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend: true}));
-app.use('/rooms/', express.static(path.join(__dirname, '../public')));
+app.use('/rooms/:id', express.static(path.join(__dirname, '../public')));
 
 
 // get request
-app.get(`/rooms/listing/api/`, function(req, res) {
-  console.log(req.query)
-  // console.log('Received get request for listings: ', req.params);
-  let id=req.query.id
-  Listings.find({listing_id: id}, function(err, listingData) {
+app.get(`/api/rooms/:id/listing`, function(req, res) {
+  console.log('Received get request for listings: ', req.params);
+  Listings.find({listing_id: req.params.id}, function(err, listingData) {
     if(err) {
       console.log('err', err)
     }
+    console.log('All the details of listing', listingData)
     res.json(listingData);
   });
 })
@@ -31,4 +30,3 @@ app.get(`/rooms/listing/api/`, function(req, res) {
 app.listen(port, () => {
   console.log(`Server is listening on ${port}`);
 });
-
