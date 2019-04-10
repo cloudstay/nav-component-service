@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import uuidv4 from 'uuid/v4';
+
 
 const customStyles = {
   content : {
@@ -60,7 +60,7 @@ class Amenities extends React.Component {
       console.log("item => ", item)
       return (
         <div className="amenity-name" key={index}>
-          <img className="amenity-icon" src={`icons/${item}.svg`}></img>
+          <img className="amenity-icon" src={`https://s3-us-west-1.amazonaws.com/amenitiesicons/${item}.svg`}></img>
           <span className="amenity">{item.split('_').join(' ')}</span>
         </div>
       )
