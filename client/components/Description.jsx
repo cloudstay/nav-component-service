@@ -7,20 +7,20 @@ class Description extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      isClicked: false,
+      showMore: false,
     };
     this.handleShowMore = this.handleShowMore.bind(this);
   }
 
   handleShowMore() {
     this.setState(prevState => ({
-      isClicked: !prevState.isClicked
+      showMore: !prevState.showMore
     }));
   }
 
   render() {
     if(this.props.listing) {
-      if (!this.state.isClicked) {
+      if (!this.state.showMore) {
         return (
           <div id="details">
             <div className="detail details-text text" aria-hidden="true">
