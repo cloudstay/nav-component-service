@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      listings: []
+      listings: null
     }
     this.getListing = this.getListing.bind(this);
   }
@@ -21,12 +21,13 @@ class App extends React.Component {
 
 
   getListing() {
-    var listing_Id=window.location.search.slice(4,7);
-    axios.get(`/rooms/api/${listing_Id}`)
+    var listing_Id=window.location.pathname.split('/')[2];
+    console.log(listing_Id);
+    axios.get(`/api/rooms/${listing_Id}/listing`)
     .then((response) => {
       console.log('send a get request to the server', response.data);
       this.setState({
-        listings: response.data
+        listings: response.data[0]
       })
     })
     .catch((error) => {
@@ -34,22 +35,27 @@ class App extends React.Component {
     })
   }
 
-
   render() {
     // console.log('listings:', this.state.listings[0]);
-    return (
-      <div id="main">
-        <div className="main-container">
-          <div>
-            {this.state.listings[0] && <Title listing ={this.state.listings[0]}/>}
-            {this.state.listings[0] && <Highlights listing ={this.state.listings[0]}/>}
-            {this.state.listings[0] && <Description listing={this.state.listings[0]}/>}
-            {this.state.listings[0] && <Amenities listing={this.state.listings[0]}/>}
-            <SleepingArrangements />
+    if (this.state.listings) {
+      return (
+        <div id="main">
+          <div className="main-container">
+            <div>
+              <Title listing ={this.state.listings}/>
+              <Highlights listing ={this.state.listings}/>
+              <Description listing={this.state.listings}/>
+              <Amenities amenities ={this.state.listings.amenities[0]}/>
+              <SleepingArrangements sleepingArrangements ={this.state.listings.sleeping_arrangements}/>
+            </div>
           </div>
-        </div>
       </div>
-    )
+      )
+    } else {
+      return (
+        <div>Loading ...</div>
+      )
+    }
   }
 }
 
