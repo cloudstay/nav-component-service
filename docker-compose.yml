@@ -10,3 +10,9 @@ services:
 
   listingdatabase:
     image: mongo:latest
+
+  mongo-seed:
+    build: ./
+    depends_on:
+      - 'picturedatabase'
+    command: sh -c "npm run seed"
