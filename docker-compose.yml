@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  listings:
+    build: ./
+    depends_on:
+      'listingdatabase'
+    ports:
+      - '3003:3003'
+
+  listingdatabase:
+    image: mongo:latest
