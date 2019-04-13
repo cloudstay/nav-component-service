@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node database/seedData.js & node server/index.js",
+    "local": "nodemon server/index.js",
     "build": "webpack -d --watch",
     "seed": "node database/seedData.js",
     "test": "jest"
