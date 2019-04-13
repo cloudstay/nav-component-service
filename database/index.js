@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/listings', {useNewUrlParser: true});
+mongoose.connect('mongodb://listingdatabase/listings', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost/listings', {useNewUrlParser: true});
 
 var db = mongoose.connection;
 

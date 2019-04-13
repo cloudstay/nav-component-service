@@ -1,5 +1,4 @@
-// const webpack = require('webpack');
-// const path = require('path');
+const path = require('path');
 
 module.exports = {
   context: __dirname + '/client',
@@ -14,6 +13,10 @@ module.exports = {
           presets: ['@babel/react', '@babel/preset-env'],
         },
       },
+      {
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader'],
+      }
     ],
   },
   output: {
